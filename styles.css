@@ -1,3 +1,13 @@
 .row {
     display: flex;
 }
+
+.grid-box {
+    width: 30px;
+    height: 30px;
+    border: solid;
+}
+
+.enabled {
+    background-color: blue;
+}
