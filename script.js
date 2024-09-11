@@ -37,8 +37,22 @@ function generateGrid(dimensions) {
     for (const box of gridBoxes) {
         box.addEventListener("mouseover", () => {
             box.classList.add("enabled");
+            addColor(box);
         })
     }
+}
+
+let RGB = [255, 0, 0];
+
+function addColor(gridBox) {
+    gridBox.style.backgroundColor = `rgb(${RGB[0]}, ${RGB[1]}, ${RGB[2]})`;
+    const randomShift = Math.random() * 80 - 40;
+    const randomIndex = Math.floor(Math.random() * 3);
+    RGB[randomIndex] = RGB[randomIndex] + randomShift;
+    if (RGB[randomIndex] < 0)
+        RGB[randomIndex] = RGB[randomIndex] + 15;
+    if (RGB[randomIndex] > 255)
+        RGB[randomIndex] = RGB[randomIndex] - 15;
 }
 
 function removeGrid() {
