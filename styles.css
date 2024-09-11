@@ -3,9 +3,8 @@
 }
 
 .grid-box {
-    width: 30px;
-    height: 30px;
     border: solid;
+    border-width: .5px;
 }
 
 .enabled {
